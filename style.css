@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+body{
+        background-color: black;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    display: flex; 
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 70px;
+    height: 60px;
+    border: 2px solid;
+    box-shadow: 2px 2px 5px red;
+    border-radius: 15px;
+}
+.header h1{
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    transform: translateX(30%);
+    text-shadow:0 3px 4px;
+    color: aqua;
+    border-bottom: 2px solid blanchedalmond;
+    margin-top: 15px;
+    border-radius: 25px;
+}
+.img-back{
+    position: absolute;
+    top: 50px;
+    right: 2px;  
+}
+.img{
+    width: 60%;
+    height: 20%;
+    border-radius: 100%;
+}
+.content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top:120px;
+    align-items: center;
+    justify-content: center;
+}
+.content p{
+    color: white;
+    line-height: 60px;
+    font-size: 20px;
+    margin-left: 70px;
+}
+/*sidebar*/
+.sidebar{
+    width: 220px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(170px);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+.sidebar .lono{
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+   
+.lono img{
+    width: 40px;
+    border-radius: 70px;
+}
+.lono h2{
+    margin-left: 8px;
+    font-size: 1.5em;
+    color:aqua;
+}
+.sidebar .links{
+    list-style: none;
+    margin-top: 1px;
+}
+.links li{
+    display: flex;
+    align-items: center;
+}
+.links li a{
+    color:black;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1em;
+    margin-left: 20px;
+    padding: 10px;
+    border: 2px aqua;
+}
+.links li a:hover{
+    cursor: pointer;
+    color: aqua;
+    background: rgba(0, 0, 0, 0.267);
+    border-radius: 4rem;
+    border: none;
+    font-style: italic;
+}
+.links span{
+    padding: 12px 10px;
+}
+span i{
+    color: blanchedalmond;
+    font-size: 1.3em;
+    padding: 8px 8px;
+    border-radius: 12px;
+    margin-left: 30px;
+}
+.links li:hover i{
+    border: 0.5px solid aqua;
+    color: rgba(255, 0, 0, 0.568);
+    background: black;   
+}
+#check{
+    display: none;
+}
+.main-box .btn-one i{
+    color: #000000;
+    background-color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 1;
+    left: 3px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+.main-box .btn-two i{
+    font-size: 20px;
+    position: fixed;
+    line-height: 60px;
+    left: 200px;
+    top: 2px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s linear;
+    color: black;
+}
+.btn-one:hover i{
+    font-size: 25px;
+}
+.btn-one:hover i{
+    font-size: 29px; 
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ .btn-one i{
+    opacity: 0; 
+}
+#check:checked ~ .btn-two i{
+    opacity: 1;
+    z-index: 2;
+}
+/*services*/
